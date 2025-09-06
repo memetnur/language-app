@@ -7,12 +7,14 @@ import { Scenario } from './Scenario'
 export class ScenarioFactory {
   static createScenario(scenario: string): Scenario {
     switch (scenario) {
-      case 'supermarket':
-        return new SupermarketScenario()
-      case 'restaurant':
-        return new RestaurantScenario()
-      case 'train station':
+      case 'Hotel':
+        return new HotelReceptionScenario()
+      case 'Train':
         return new TrainStationScenario()
+      case 'Dentist':
+        return new DentistScenario()
+      case 'Tourist':
+        return new TouristInfoScenario()
       default:
         throw new Error(`Scenario "${scenario}" not found.`)
     }
